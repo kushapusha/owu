@@ -57,19 +57,19 @@ function userCard(number){
 
 };
 
-const card1 = userCard(1);
-const card2 = userCard(2);
+// const card1 = userCard(1);
+// const card2 = userCard(2);
 const card3 = userCard(3);
 
 // card3.putCredits(150);
-// card3.takeCredits(110);
+card3.takeCredits(110);
 // card3.setTransactionLimit(3000);
 
-card3.getCardOptions();
-card1.getCardOptions();
+// card3.getCardOptions();
+// card1.getCardOptions();
 
-card3.transferCredits(20, card1);
-card3.transferCredits(30, card2);
+// card3.transferCredits(20, card1);
+// card3.transferCredits(30, card2);
 
-card2.transferCredits(50, card1);
+// card2.transferCredits(50, card1);
 
