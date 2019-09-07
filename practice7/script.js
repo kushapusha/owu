@@ -36,12 +36,23 @@
 // fibonacci(20);
 
 
-function factorial(num){
-    let res = 1;
-    for (i = 1; i <= num; i++){
-        res *= i;
+// function factorial(num){
+//     let res = 1;
+//     for (i = 1; i <= num; i++){
+//         res *= i;
+//     }
+//     return res;
+// }
+
+// console.log(factorial(5));
+
+
+function fibonacci(max){
+    let arr = [1, 2];
+    for (i = 1; i < max-1; i++){
+        arr.push(arr[i] + arr[i-1])
     }
-    return res
+    console.log(arr);
 }
 
-factorial(5);
+fibonacci(10);
