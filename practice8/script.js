@@ -28,7 +28,7 @@ let Aldo = new User('Aldo', 'Farelli', 25, 'male', 'Itali', 'Milan', false);
 
 let userArr = [Vika, Vasia, Olha, Peter, Huan, Dima, Harry, Grisha, Joan, Aldo];
 
-function sorter(userArr = [], field, way){
+function sorter(userArr = [], field, way, filtr){
     let arr = userArr.map(function(user){
         return (user[field]);
     })
@@ -42,6 +42,8 @@ function sorter(userArr = [], field, way){
             }
             return 0;
         })
+        console.log(arr);
+        arr = arr.filter( value => value > filtr);
     }
     if (way === 'down'){
         arr = arr.sort((a, b) => {
@@ -53,8 +55,13 @@ function sorter(userArr = [], field, way){
             }
             return 0;
         })
+        console.log(arr);
+        arr = arr.filter( value => value > filtr);
     }
+
+
+
     console.log(arr);
 }
 
-sorter(userArr, 'FirstName', 'up');
+sorter(userArr, 'FirstName', 'down', 'Huan');
