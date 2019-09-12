@@ -3,6 +3,11 @@ class Computer{
         this.ram = ram;
         this.cpu = cpu;
     }
+
+    onOff(){
+        console.error()
+    }
+
 }
 
 class Leptop extends Computer{
