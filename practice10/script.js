@@ -12,22 +12,13 @@ function DrukarskaMash(str){
             console.log(str.slice(0, i));     
             i++;
             DrukarskaMash(str);
-        } else if  (j > 0){          
+        } else if  (j >= 0){          
             console.clear();
             console.log(str.slice(0, j));     
             j--;
             DrukarskaMash(str);
         }
-    }, 500)
-
-    // setTimeout(() => {
-    //     if (j > 0){          
-    //         console.clear();
-    //         console.log(str.slice(0, j));     
-    //         j--;
-    //         DrukarskaMash(str);
-    //     }
-    // }, 500)
+    }, time)
 
 }
 
