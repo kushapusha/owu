@@ -60,14 +60,14 @@ function Dinner(){
 
 
 
-// async function Day() {
-//     console.log(await Awake());
-//     console.log(await Shower());
-//     console.log(await Breakfast());
-//     console.log(await MakeUp());
-//     console.log(await Work());
-//     console.log(await Home());
-//     console.log(await Dinner());
-// }
+async function Day() {
+    console.log(await Awake());
+    console.log(await Shower());
+    console.log(await Breakfast());
+    console.log(await MakeUp());
+    console.log(await Work());
+    console.log(await Home());
+    console.log(await Dinner());
+}
 
-// Day();
+Day();
