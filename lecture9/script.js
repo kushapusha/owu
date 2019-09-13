@@ -72,27 +72,27 @@ SuperComp1.forGames(20, 'intell');
 
 
 
-// function forUltrabook(whichUltra){
-//     if (whichUltra.weight > 2){
-//         throw new Error ('HEY, it is not Ultrabook!!!')
-//     }
-//     console.log(whichUltra);
-// }
-// forUltrabook(Ultrabook1);
+function forUltrabook(whichUltra){
+    if (whichUltra.weight > 2){
+        throw new Error ('HEY, it is not Ultrabook!!!')
+    }
+    console.log(whichUltra);
+}
+forUltrabook(Ultrabook1);
 
 
-// function forSuperComp(whichSC){
-//     if(whichSC.ram < 32 && whichSC.cpu !== 'intell'){
-//         throw new Error ('Sorry, but your computer is not SUPER:((')
-//     }
-//     console.log(whichSC);
-// }
+function forSuperComp(whichSC){
+    if(whichSC.ram < 32 && whichSC.cpu !== 'intell'){
+        throw new Error ('Sorry, but your computer is not SUPER:((')
+    }
+    console.log(whichSC);
+}
 
-// forSuperComp(SuperComp1);
+forSuperComp(SuperComp1);
 
 
-// SuperComp1.OnOff('on');
-// Ultrabook1.OnOff('off');
+SuperComp1.OnOff('on');
+Ultrabook1.OnOff('off');
 
-// Ultrabook1.goToUniversity();
+Ultrabook1.goToUniversity();
 
