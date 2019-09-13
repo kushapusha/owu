@@ -1,58 +1,98 @@
 class Computer{
-    constructor(ram, cpu){
+    constructor(name, ram, cpu){
+        this.name = name;
         this.ram = ram;
         this.cpu = cpu;
     }
 
-    onOff(){
-        console.error()
+    OnOff(button){
+
+        if (button === 'on'){
+        console.log(`Your ${this.name} is on`)}
+
+        if (button === 'off'){
+        console.error(`Your ${this.name} is off`)}
+    }
+
+    forGames(gameRam, gameCpu){
+        if (this.ram < gameRam || this.cpu !== gameCpu) {
+            throw new Error (`Sorry, but your ${this.name} cant support this game`)
+        }
+        console.log('Lets play')
     }
 
 }
 
 class Leptop extends Computer{
-    constructor(ram, cpu, weight, inch, cdRom){
-        super(ram, cpu);
+    constructor(name, ram, cpu, weight, inch, cdRom){
+        super(name, ram, cpu);
         this.weight = weight;
         this.inch - inch;
         this.cdRom = cdRom;
     }
+
+    goToUniversity(){
+        console.error(`Oh nooooo. I dont want to get ${this.name} to University`)
+    }
+
 }
 
 class Ultrabook extends Leptop{
-    constructor(ram, cpu, weight, inch, cdRom){
-        super(ram, cpu, weight, inch, cdRom);
+    constructor(name, ram, cpu, weight, inch, cdRom){
+        super(name, ram, cpu, weight, inch, cdRom);
     }
+
+    goToUniversity(){
+        console.log(`Cool. ${this.name} is greate idea.`)
+    }
+
 }
 
 class SuperComp extends Computer{
-    constructor(ram, cpu){
-        super(ram, cpu);
+    constructor(name, ram, cpu){
+        super(name, ram, cpu);
     }
+
+    goToUniversity(){
+        throw new Error(`No! You cant bring ${this.name} to University!`)
+    }
+
 }
 
 
-// let LALA = new Ultrabook(8, 'intell', 3, 13, false);
-// let LALALA = new Ultrabook(8, 'intell', 1, 13, false);
+let Ultrabook1 = new Ultrabook('Ultrabook', 8, 'intell', 3, 13, false);
+let Ultrabook2 = new Ultrabook('Ultrabook', 8, 'intell', 1, 13, false);
+let Leptop1 = new Leptop('Leptop', 16, 'intell', 4, 15, true);
+let Leptop2 = new Leptop('Leptop', 8, 'AMD', 3, 14, false);
+let SuperComp1 = new SuperComp('SuperComp', 16, 'AMD');
+let SuperComp2 = new SuperComp('SuperComp', 32, 'intell');
 
 
-// function forUltrabook(nameme){
-//     if (nameme.weight > 2){
+SuperComp1.forGames(20, 'intell');
+
+
+
+// function forUltrabook(whichUltra){
+//     if (whichUltra.weight > 2){
 //         throw new Error ('HEY, it is not Ultrabook!!!')
 //     }
-//     console.log(nameme);
+//     console.log(whichUltra);
 // }
-// forUltrabook(LALA);
+// forUltrabook(Ultrabook1);
 
 
-let C1 = new SuperComp(16, 'AMD');
-let C2 = new SuperComp(32, 'intell');
+// function forSuperComp(whichSC){
+//     if(whichSC.ram < 32 && whichSC.cpu !== 'intell'){
+//         throw new Error ('Sorry, but your computer is not SUPER:((')
+//     }
+//     console.log(whichSC);
+// }
 
-function forSuperComp(C){
-    if(C.ram < 32 && C.cpu !== 'intell'){
-        throw new Error ('Sorry, but your computer is not SUPER:((')
-    }
-    console.log(C);
-}
+// forSuperComp(SuperComp1);
 
-forSuperComp(C2);
+
+// SuperComp1.OnOff('on');
+// Ultrabook1.OnOff('off');
+
+// Ultrabook1.goToUniversity();
+
