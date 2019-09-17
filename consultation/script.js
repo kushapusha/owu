@@ -2,7 +2,7 @@
 function MinMax(n, num){
     let arr = [];
     for (let i = 0; i < n; i++){
-        let el = parseInt(Math.random()*9);
+        let el = parseInt(Math.random()*99);
         arr.push(el);
     }
     arr.sort((el1, el2) => {
@@ -18,7 +18,7 @@ function MinMax(n, num){
     console.log(`MaxIndex = ${Max}`);
 
 }
-MinMax(10, 5);
+MinMax(100, 5);
 
 
 
