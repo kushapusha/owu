@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <div id="divka" class="divulka" style="width: 200px; height: 100px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, soluta eius at velit illum consequuntur accusamus asperiores accusantium facilis provident animi voluptas repellendus dolores cupiditate omnis voluptatem eligendi amet ad?</div>
+
+
+    <form id="forma1">
+        <input type="text" id="inp11" value="hello">
+        <input type="text" id="inp12" value="world">
+    </form>
+
+    <form id="forma2">
+        <input type="text" id="inp21" value="goodbye">
+        <input type="text" id="inp22" value="world">
+    </form>
+
+    <button id="btn">GET INFO</button> -->
+
+    <input type="text" id="censured" value="bla">
+    <button id="cens">Check</button>
+
+    <script>
+
+        // // FIRST TASK
+
+        // let someText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ';
+    
+        // let divulkinIDText = document.getElementById('divka');
+        // console.log(divulkinIDText.innerText);
+        // divulkinIDText.innerText = someText;
+        // console.log(divulkinIDText.innerText);
+
+        // let divulkinClassText = document.getElementsByClassName('divulka');
+        // console.log(divulkinClassText[0].innerText);
+
+        // let divulkinTagText = document.getElementsByTagName('div');
+        // console.log(divulkinTagText[0].innerText);
+
+        // let red = Math.random()*255;
+        // let green = Math.random()*255;
+        // let blue = Math.random()*255;
+
+        // let blockWidth = Math.random()*(200-100)+100;
+        // let blockHeight = Math.random()*(200-100)+100;
+
+        // function Block(r, g, b, w, h){
+        //     divulkinIDText.style.backgroundColor = `rgb(${r} ${g} ${b})`; divulkinIDText.style.width = `${w}px`;
+        //     divulkinIDText.style.height = `${h}px`;
+        // }
+
+        // Block(red, green, blue, blockWidth, blockHeight);
+
+
+        // // SECOND TASK
+
+        // let btn = document.getElementById('btn');
+        // let inp11 = document.getElementById('inp11');
+        // let inp12 = document.getElementById('inp12');
+        // let inp21 = document.getElementById('inp21');
+        // let inp22 = document.getElementById('inp22');
+
+        // btn.onclick = () => {
+        //     console.log(inp11.value);
+        //     console.log(inp12.value);
+        //     console.log(inp21.value);
+        //     console.log(inp22.value);
+        // }
+
+        // FORTH TASK
+
+        let censured = document.getElementById('censured');
+        let dirtyWords = ['курва', 'срака', 'йопта', 'тьола'];
+        let cens = document.getElementById('cens');
+
+        // censured.oninput = () => {
+        // for (let i = 0; i < dirtyWords.length; i++){
+        //     if (censured.value === dirtyWords[i]){
+        //         alert ('Узбагойзя, пиши нормально!');
+        //     }
+        // }
+        // }
+
+        cens.onclick = () => {
+            for (let i = 0; i < dirtyWords.length; i++){
+            if (censured.value === dirtyWords[i]){
+                alert ('Узбагойзя, пиши нормально!');
+            }
+        }
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>
