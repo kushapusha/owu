@@ -23,8 +23,16 @@
 
     <button id="btn">GET INFO</button> -->
 
-    <input type="text" id="censured" value="bla">
-    <button id="cens">Check</button>
+    <!-- <input type="text" id="censured" value="bla">
+    <button id="cens">Check</button> -->
+
+    <div id="divulka" style="border:1px solid black; width: 50%;">la</div>
+
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
 
     <script>
 
@@ -75,9 +83,9 @@
 
         // FORTH TASK
 
-        let censured = document.getElementById('censured');
-        let dirtyWords = ['курва', 'срака', 'йопта', 'тьола'];
-        let cens = document.getElementById('cens');
+        // let censured = document.getElementById('censured');
+        // let dirtyWords = ['курва', 'срака', 'йопта', 'тьола'];
+        // let cens = document.getElementById('cens');
 
         // censured.oninput = () => {
         // for (let i = 0; i < dirtyWords.length; i++){
@@ -87,15 +95,46 @@
         // }
         // }
 
-        cens.onclick = () => {
-            for (let i = 0; i < dirtyWords.length; i++){
-            if (censured.value === dirtyWords[i]){
-                alert ('Узбагойзя, пиши нормально!');
+        // cens.onclick = () => {
+
+        //     let sentence = censured.value.split(' ');
+
+        //     for (let j = 0; j < word.length; j++) {
+        //         for (let i = 0; i < dirtyWords.length; i++) {
+
+        //             if (word[j] === dirtyWords[i]) {
+        //              alert ('Узбагойзя, пиши нормально!');
+        //             }
+        //         }
+        //     }
+        // }
+
+        // THIRD TASK
+
+        let divka = document.getElementById('divulka');
+        let liha = document.getElementsByTagName('li');
+
+        function Table(row, col, place){
+
+            let tbl = document.createElement('table');
+
+            for (let i = 1; i <= row; i++){
+                let rows = document.createElement('tr');
+
+                for (let j = 1; j <= col; j++){
+                    let column = document.createElement('td');
+                    rows.appendChild(column)
+                }
+            
+            tbl.appendChild(rows);
+
             }
-        }
+
+            place.appendChild(tbl);
+            tbl.setAttribute('border', '2');
         }
 
-
+        Table(2, 6, divka);
 
 
     </script>
