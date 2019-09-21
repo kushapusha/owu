@@ -8,14 +8,22 @@
 </head>
 <body>
     
+    <!-- FIRST TASK + SECOND TASK-->
+
     <!-- <div id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore inventore laborum sunt quos saepe, eius dolor sint error voluptas minus architecto libero quod dolores ipsam. </div>
     <button id="btn">HIDE</button> -->
+
+    <!-- THIRD TASK -->
 
     <!-- <input type="number" id="age" value="0">
     <button type="submit" id="ageBtn">Confirm</button> -->
 
+    <!-- FORTH TASK -->
+
     <!-- <input type="range" id="sizing" min="200" max="600">
     <div id="block" style="width: 200px; height: 200px; border: 1px solid black"></div> -->
+
+    <!-- FIFTH AND SIXTH TASKS -->
 
     <!-- <div>
         <p id="menu">Menu</p>
@@ -25,6 +33,22 @@
             <li><span>contact</span><button>hide</button></li>
         </ul>
     </div> -->
+
+    <!-- SEVENTH TASK -->
+
+    
+    <div class="task">
+        
+        <button id="prev">Prev</button>
+
+        <img src="1.jpg">
+        <img src="2.jpg">
+        <img src="3.jpg">
+        <img src="4.jpg">
+
+        <button id="next">Next</button>
+
+    </div>
 
     <style>
 
@@ -36,9 +60,56 @@
             height: 18px;
         } */
 
+        img {
+            display: none;
+        }
+
+        .task {
+            text-align: center;
+        }
+
+
     </style>
 
     <script>
+
+        // SEVENTH TASK
+
+        let imgs = document.getElementsByTagName('img');
+        let prev = document.getElementById('prev');
+        let next = document.getElementById('next');
+
+        let showImg = 0;
+
+        imgs[showImg].style.display = 'inline-block';
+
+        next.onclick = () => {
+
+        imgs[showImg].style.display = 'none';
+
+        showImg++;
+
+        if (showImg > imgs.length - 1){
+            showImg = 0;
+        }
+ 
+        imgs[showImg].style.display = 'inline-block';
+        }
+
+
+
+        prev.onclick = () => {
+
+        imgs[showImg].style.display = 'none';
+
+        showImg--;
+
+        if (showImg < 0){
+            showImg = imgs.length - 1;
+        }
+
+        imgs[showImg].style.display = 'inline-block';
+        }
         
         // let txt = document.getElementById('text');
         // let btn = document.getElementById('btn');
