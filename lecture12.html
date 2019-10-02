@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <textarea id="txt" cols="30" rows="10"></textarea> -->
+
+    <form name="forma">
+
+        <input type="text" name="inp"><br>
+
+        <input type="checkbox" name="inp1" value="0">1
+        <input type="checkbox" name="inp1" value="1">2
+        <input type="checkbox" name="inp1" value="2">3
+        <input type="checkbox" name="inp1" value="3">4 <br>
+
+        <input type="radio" name="inp2" value="0">1
+        <input type="radio" name="inp2" value="1">2 <br>
+
+        <textarea name="inp3" cols="30" rows="10"></textarea><br>
+
+        <select name="inp4">
+            <option value="1" name='opt'>1</option>
+            <option value="2" name='opt'>2</option>
+            <option value="3" name='opt'>3</option>
+            <option value="4" name='opt'>4</option>
+        </select>
+
+    </form>
+
+    <script>
+
+        let forma = document.forms.forma;
+        let inp3 = forma.inp3;
+        let inp4 = forma.inp4;
+
+
+        
+
+    
+    // let txt = document.getElementById('txt');
+
+    // txt.oninput = () => {
+    //     localStorage.setItem('txt', JSON.stringify(txt.value));
+    // }
+    // txt.value = JSON.parse(localStorage.getItem('txt'));
+    
+
+
+
+    </script>
+
+</body>
+</html>
